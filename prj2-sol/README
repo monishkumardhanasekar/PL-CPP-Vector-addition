@@ -1,0 +1,12 @@
+Name:		Monish Kumar Dhanasekar
+B-Number:	B01025975
+Email:		mdhanasekar@binghamton.edu
+
+Add text here as needed to document the status of your project.
+
+Language used: C++
+
+commands to compile: ./make.sh
+commands to run: ~/cs571/projects/prj2/extras/do-tests.sh run.sh
+
+Before the compile and run command make sure that you are in correct path: /home/mdhanasekar/i571/submit/prj2-sol
