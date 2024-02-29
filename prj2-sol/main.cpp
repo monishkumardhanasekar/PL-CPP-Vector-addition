@@ -23,16 +23,19 @@ int main(int argc, const char* argv[]) {
     for (int op = 0; op < N_OPS; ++op) {
         Vector* vector1;
         Vector* vector2;
+        Vector* sum_vector; // New vector to hold the sum
+
         try {
             vector1 = new Vector(N_ENTRIES); // Create a new Vector object
             vector2 = new Vector(N_ENTRIES); // Create another new Vector object
+            sum_vector = new Vector(N_ENTRIES); // Create a new Vector object for the sum
 
             vector1->read();    // Read input values into the first vector
             vector2->read();    // Read input values into the second vector
 
-            vector1->add(*vector2);
+            vector1->add(*vector2, *sum_vector); // Add the vectors and store the result in the sum vector
 
-            vector1->write();
+            sum_vector->write(); // Write the sum vector to standard output
         } catch (const std::bad_alloc& e) {
             panic("Memory allocation failed: %s", e.what());
         } catch (const std::exception& e) {
@@ -41,6 +44,7 @@ int main(int argc, const char* argv[]) {
 
         delete vector1; // Deallocate memory for the first vector
         delete vector2; // Deallocate memory for the second vector
+        delete sum_vector; // Deallocate memory for the sum vector
     }
 
     return 0;
