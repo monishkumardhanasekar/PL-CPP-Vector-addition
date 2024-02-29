@@ -29,9 +29,9 @@ void Vector::read() {
 }
 
 // Adds another vector to this vector
-void Vector::add(const Vector& other) {
+void Vector::add(const Vector& other, const Vector& sum) {
     for (size_t i = 0; i < size_; ++i) {
-        data_[i] += other.data_[i];
+        sum.data_[i] = data_[i] + other.data_[i]; // Add corresponding elements and store in sum
     }
 }
 
