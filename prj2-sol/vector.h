@@ -15,7 +15,7 @@ public:
     void read();
 
     // Adds elements of another Vector to this Vector element-wise
-    void add(const Vector& other);
+    void add(const Vector& other, const Vector& sum);
 
     // Writes the elements of the vector to standard output
     void write() const;
